@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">TargetAlarmRange</string>
+    <string name="app_name">Target Alarm Range</string>
+    <color name="CELSIUS_THEME">#636363</color>
+    <color name="FAHRENHEIT_THEME">#FF3F81</color>
 </resources>

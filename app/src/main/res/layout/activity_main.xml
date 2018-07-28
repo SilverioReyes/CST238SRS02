@@ -1,18 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/TVMin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginStart="30dp"
+        android:text="Adjust Min"
+        android:textSize="16sp" />
+
+    <SeekBar
+        android:id="@+id/seekBarMin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:max="500"
+        android:progress="200" />
+
+    <TextView
+        android:id="@+id/TVMinvalue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:hint="Min Value"/>
+
+    <TextView
+        android:id="@+id/TVTarget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginStart="30dp"
+        android:text="Adjust Target"
+        android:textSize="16sp" />
+
+    <SeekBar
+        android:id="@+id/seekBarTarget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:max="500"
+        android:progress="200" />
+
+    <TextView
+        android:id="@+id/TVTargetvalue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:hint="Target Value"/>
+
+    <TextView
+        android:id="@+id/TVMax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginStart="30dp"
+        android:text="Adjust Max"
+        android:textSize="16sp" />
+
+    <SeekBar
+        android:id="@+id/seekBarMax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:max="500"
+        android:progress="200" />
+
+    <TextView
+        android:id="@+id/TVMaxvalue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:hint="Max Value"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/TVTempMin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:hint="200 F"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/TVTempMax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:hint="500 F"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/TVTempConverter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:paddingTop="30dp"
+        android:text="Temperature Converter:"
+        android:textSize="16sp" />
+
+    <ToggleButton
+        android:id="@+id/TBTempConverter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="18dp"
+        android:checked="true"
+        android:textOn="Farenheit"
+        android:textOff="Celsius"/>
+    </RelativeLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btnSetalarm"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="Set Alarm"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu" />
+
+</LinearLayout>
